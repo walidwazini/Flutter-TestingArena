@@ -5,6 +5,7 @@ import 'package:testing/widgets/input_2.dart';
 import 'package:testing/widgets/ishja.dart';
 import 'package:testing/widgets/profile.dart';
 import 'package:testing/widgets/switch.dart';
+import './screens/Screen_SpinKit.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         'Testing' : (context) => Testing2Page(),
         'InputPage' : (context) => InputPage(),
         'SwitchPage' : (context) => SwitchPage(),
+        'Spin Kit' : (context) => SpinKitScreen(),
       },
     );
   }

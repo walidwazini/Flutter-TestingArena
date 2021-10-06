@@ -13,6 +13,15 @@ class _HomePageState extends State<HomePage> {
 
   // var logoImage = 'assets/images/flutter-1.png';
 
+  Widget buildCommonBtn(String textBtn, String routeName){
+    return ElevatedButton(
+        onPressed: (){
+          Navigator.pushNamed(context, routeName);
+        },
+        child: Text(textBtn),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,12 +125,13 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushNamed(context, 'InputPage');
                     }, child: Text('Input Page')),
                     SizedBox(height: 10,),
-                    ElevatedButton(onPressed: (){
-                      Navigator.pushNamed(context, 'SwitchPage');
-                    }, child: Text('Switch Page'))
+                    buildCommonBtn('Switch Page', 'SwitchPage'),
+                    SizedBox(height: 10,),
+                    buildCommonBtn('SpinKit', 'Spin Kit')
                   ],
                 ),
               )),
-        ));
+        ),
+    );
   }
 }
