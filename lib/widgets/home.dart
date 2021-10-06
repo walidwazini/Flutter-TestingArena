@@ -13,12 +13,13 @@ class _HomePageState extends State<HomePage> {
 
   // var logoImage = 'assets/images/flutter-1.png';
 
-  Widget buildCommonBtn(String textBtn, String routeName){
+  Widget buildCommonBtn(String textBtn, String routeName, Color colorChoice){
     return ElevatedButton(
         onPressed: (){
           Navigator.pushNamed(context, routeName);
         },
         child: Text(textBtn),
+      style: ElevatedButton.styleFrom(primary: colorChoice ),
     );
   }
 
@@ -125,9 +126,10 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushNamed(context, 'InputPage');
                     }, child: Text('Input Page')),
                     SizedBox(height: 10,),
-                    buildCommonBtn('Switch Page', 'SwitchPage'),
+                    buildCommonBtn('Switch Page', 'SwitchPage', Colors.blue),
                     SizedBox(height: 10,),
-                    buildCommonBtn('SpinKit', 'Spin Kit')
+                    buildCommonBtn('SpinKit', 'Spin Kit', Colors.blue),
+                    //buildCommonBtn('SpinKit', 'Spin Kit')
                   ],
                 ),
               )),

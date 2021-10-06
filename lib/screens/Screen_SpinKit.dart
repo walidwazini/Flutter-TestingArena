@@ -9,11 +9,13 @@ class SpinKitScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Row(children: [
-            SpinKitRotatingCircle(
-              color: Colors.orange,
-            )
-          ],)
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+            SpinKitRotatingCircle(color: Colors.orange,),
+            SpinKitRotatingPlain(color: Colors.amber,),
+          ],),
+          SpinKitChasingDots(color: Colors.red,)
         ],
       ),
     );
