@@ -118,13 +118,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.pushNamed(context, 'Testing');
                     }, child: Text('To Testing Page')),
                     SizedBox(height: 10,),
-                    ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Theme.of(context).primaryColor
-                        ),
-                        onPressed: (){
-                      Navigator.pushNamed(context, 'InputPage');
-                    }, child: Text('Input Page')),
+                    buildCommonBtn('Input Page', 'InputPage', Colors.green),
                     SizedBox(height: 10,),
                     buildCommonBtn('Switch Page', 'SwitchPage', Colors.blue),
                     SizedBox(height: 10,),
